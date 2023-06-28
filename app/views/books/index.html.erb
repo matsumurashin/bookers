@@ -1,100 +1,13 @@
 <h1>Books</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan= "3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-      <tr>
-          <tb>リーダブルコード</tb>
-          <tb>より良いコードを書くためのシンプルで実践的なテクニック</tb>
-          <tb>
-              <a class="show_158552" href="books/158552">Show</a>
-          </tb>
-          <tb>
-              <a class="Edit_158552" href="books/158552/edit">Edit</a>
-          </tb>
-          <tb>
-              <a class=""
-          </tb>
-
-          <tb>トラブル知らずのシステム設計</tb>
-          <tb>システム設計の要点を図解で説明してくれます</tb>
-          <tb>
-              <a class="show_158553" href="books/158553">Show</a>
-          </tb>
-          <tb>
-              <a class="Edit_158553" href="books/158553/edit">Edit</a>
-          </tb>
-          <tb>
-              <a class=""
-          </tb>
-
-          <tb>たのしいRuby</tb>
-          <tb>Rubyの入門におすすめです</tb>
-          <tb>
-              <a class="Show_158554" href="books/158554">Show</a>
-          </tb>
-          <tb>
-              <a class="Edit_158554" href="books/158554/edit">Edit</a>
-          </tb>
-          <tb>
-              <a class=""
-          </tb>
-
-          <tb>入門Git</tb>
-          <tb>gitについての基本操作から内部構造まで解説してくれます</tb>
-          <tb>
-              <a class="Show_158555" href="books/158555">Show</a>
-          </tb>
-          <tb>
-              <a class="Edit_158555" href="books/158555/edit">Edit</a>
-          </tb>
-          <tb>
-              <a class=""
-          </tb>
-
-          <tb>アルゴリズム図鑑</tb>
-          <tb>アルゴリズムについてカラーイラストでしっかり解説してくれます</tb>
-          <tb>
-              <a class="Show_158556" href="books/158556">Show</a>
-          </tb>
-          <tb>
-              <a class="Edit_158556" href="books/158556/edit">Edit</a>
-          </tb>
-          <tb>
-              <a class=""
-          </tb>
-
-          <tb>達人プログラマー</tb>
-          <tb>プログラマ初心者は必読！</tb>
-          <tb>
-              <a class="Show_158557" href="books/158557">Show</a>
-          </tb>
-          <tb>
-              <a class="Edit_158557" href="books/158557/edit">Edit</a>
-          </tb>
-          <tb>
-              <a class=""
-          </tb>
-
-          <tb>データベース実践入門</tb>
-          <tb>効率的なSQL文を教えてくれます</tb>
-          <tb>
-              <a class="Show_158558" href="books_158558">Show</a>
-          </tb>
-          <tb>
-              <a class="Edit_158558" href="books/158558/edit">Edit</a>
-          </tb>
-          <tb>
-              <a class=""
-          </tb>
-
-  </tbody>
-</table>
 
 <h2>New Book</h2>
+<%= form_with model: @book do |f| %>
+<h4>title</h4>
+<%= f.text_field :Title %>
+
+<h4>body</h4>
+<%= f. text_area :Body %>
+
+<%= f.submit :'Create Books' %>
+
+<% end %>
