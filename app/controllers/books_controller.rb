@@ -13,11 +13,19 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     # (book_params)は、ストロングパラメーター
     if @book.save
+    flash[:notice] = "Book was successfully created."
     redirect_to book_path(@book.id)
     else
     @book = Book.all
     render :show
     end
+  end
+
+  def destroy
+    book = Book.find(params[:id])
+    book.destroy
+    flash[:notice] = "Book was successfully destroyed."
+    redirect_to '/books'
   end
 
   def show
@@ -31,6 +39,7 @@ class BooksController < ApplicationController
   def update
     book = Book.find(params[:id])
     book.update(book_params)
+    flash[:notice] ="Book was successfully updated."
     redirect_to book_path(book.id)
   end
 
