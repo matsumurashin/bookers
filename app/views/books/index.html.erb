@@ -31,14 +31,18 @@
 
 <h2>New Book</h2>
 
-<% if @book.errors.any? %>
-  <%= @book.errors.count %>errors prohibited this book from being saved:
-  <ul>
-    <% @book.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+
+  <% if @book.errors.any? %>
+  <div class="error-box">
+    <h4 class="error-header"><%= @book.errors.count %>errors prohibited this book from being saved:</h4>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
 
 <%= form_with model: @book do |f| %>
 <h4>title</h4>
